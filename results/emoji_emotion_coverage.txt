@@ -1,0 +1,25 @@
+Emojis in EmoTag: 150
+Emoji nodes in our network: 253
+  with an emotion: 118 (EmoTag: 114 | manual: 4 )
+  without an emotion: 135
+Share of emoji links (strength) with an emotion: 0.801
+
+Emoji nodes per emotion:
+
+       anger anticipation      disgust         fear          joy     multiple      sadness     surprise 
+           5           13            5            5           38           35            9            3 
+       trust         <NA> 
+           5          135 
+
+Most-linked emojis still without an emotion:
+ name degree strength
+   🍂     10       14
+   ☕      8        8
+   🍁      8       10
+    ☹      7        9
+   🤘      6        6
+   🤓      6        7
+   📚      6        6
+   🏢      5        5
+   😮      5        5
+    ❣      5        5
