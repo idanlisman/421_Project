@@ -1,4 +1,5 @@
 "word","n_posts"
+"abandonment",1
 "abomination",1
 "abortion",3
 "abscess",1
@@ -239,7 +240,7 @@
 "choir",2
 "chronic",5
 "chuckle",6
-"church",11
+"church",12
 "clan",1
 "clap",2
 "clash",1
@@ -271,7 +272,7 @@
 "compliment",5
 "concerned",6
 "condemn",2
-"confidence",3
+"confidence",4
 "confident",7
 "conflict",3
 "confusion",3
@@ -349,7 +350,7 @@
 "dandy",1
 "danger",3
 "dangerous",7
-"dare",1
+"dare",2
 "dark",58
 "darkness",3
 "dashed",6
@@ -453,7 +454,7 @@
 "doctor",9
 "dole",2
 "doll",1
-"don",19
+"don",12
 "doom",9
 "doubt",6
 "dove",2
@@ -534,7 +535,7 @@
 "fancy",4
 "farm",3
 "fat",7
-"father",10
+"father",9
 "fault",7
 "favorite",15
 "fear",110
@@ -542,7 +543,7 @@
 "fearing",9
 "fearless",1
 "fee",2
-"feeling",46
+"feeling",47
 "fell",2
 "fellow",6
 "felon",2
@@ -582,9 +583,9 @@
 "framework",1
 "frank",2
 "fraud",5
-"freedom",6
+"freedom",7
 "fret",17
-"friend",30
+"friend",31
 "friendship",4
 "fright",11
 "frighten",2
@@ -626,9 +627,9 @@
 "glow",2
 "glum",1
 "gluttony",1
-"god",78
+"god",77
 "goo",1
-"good",189
+"good",190
 "goodness",2
 "gore",1
 "gorgeous",2
@@ -676,13 +677,13 @@
 "happen",19
 "happily",3
 "happiness",28
-"happy",194
+"happy",196
 "harass",1
 "harbor",1
 "hardship",1
 "hardy",1
 "harm",9
-"harry",2
+"harry",3
 "harvest",3
 "hate",73
 "hateful",2
@@ -692,7 +693,7 @@
 "haunted",1
 "hawk",1
 "healing",4
-"hearing",9
+"hearing",10
 "heartfelt",1
 "hell",45
 "helpful",6
@@ -875,14 +876,14 @@
 "loneliness",3
 "lonely",8
 "lonesome",1
-"long",60
+"long",61
 "longing",1
 "lord",27
 "lose",29
 "losing",13
 "loss",8
 "lost",108
-"love",202
+"love",203
 "lovely",16
 "lover",2
 "loving",15
@@ -984,7 +985,7 @@
 "nose",6
 "notification",1
 "numbness",1
-"nurse",2
+"nurse",3
 "obese",1
 "objective",2
 "oblivion",1
@@ -1075,7 +1076,7 @@
 "poverty",1
 "pow",1
 "powerful",5
-"praise",3
+"praise",4
 "prank",1
 "pray",6
 "precious",2
@@ -1393,7 +1394,7 @@
 "thug",1
 "tickle",1
 "tiff",12
-"time",208
+"time",209
 "timid",5
 "tirade",1
 "title",1
@@ -1401,11 +1402,11 @@
 "toast",1
 "toilet",2
 "tolerate",1
-"tomorrow",66
+"tomorrow",67
 "top",25
 "torment",1
 "touchy",1
-"tough",4
+"tough",5
 "toxin",2
 "track",6
 "trade",3

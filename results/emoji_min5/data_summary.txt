@@ -1,0 +1,12 @@
+Posts per split:
+
+  dev  test train 
+  886  3259  6838 
+
+Share of posts with at least one emoji, by split:
+  dev  test train 
+0.260 0.263 0.120 
+
+Number of posts with each emotion label (all splits):
+       anger anticipation      disgust         fear          joy         love     optimism    pessimism      sadness     surprise        trust 
+        3960         1527         4020         1848         4319         1348         3434         1270         3233          566          553 

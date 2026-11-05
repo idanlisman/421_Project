@@ -7,7 +7,11 @@ posts <- readRDS(file.path(proc_dir, "posts_raw.rds"))
 stop_words <- stopwords::stopwords("en")   # install.packages("stopwords") if missing
 
 # Words: remove links and @mentions, lowercase, keep letters/apostrophes only
-clean <- stri_replace_all_regex(posts$Tweet, "http\\S+|@\\w+", " ")
+clean <- stri_replace_all_fixed(posts$Tweet, "\\n", " ")         # the files contain a literal "\n"
+clean <- stri_replace_all_fixed(clean, c("&amp;", "&gt;", "&lt;"), c("&", ">", "<"),
+                                vectorize_all = FALSE)                # HTML codes
+clean <- stri_replace_all_fixed(clean, "\u2019", "'")                  # curly apostrophe -> '
+clean <- stri_replace_all_regex(clean, "http\\S+|@\\w+", " ")
 clean <- stri_trans_tolower(clean)
 raw_words <- stri_extract_all_regex(clean, "[a-z']+")
 posts$words <- lapply(raw_words, function(w) {
@@ -22,9 +26,8 @@ if (only_emotion_words) {
   posts$words <- lapply(posts$words, function(w) w[w %in% nrc_words])
 }
 
-# Emojis: symbols from the original text (\p{So} = "other symbol"; may miss a few, e.g. skin tones)
-raw_emojis <- stri_extract_all_regex(posts$Tweet, "\\p{So}")
-posts$emojis <- lapply(raw_emojis, function(e) unique(e[!is.na(e)]))
+# Emojis: whole emojis from the original text (see R/emoji.R)
+posts$emojis <- extract_emojis(posts$Tweet)
 # Optionally keep only emojis that EmoTag knows (switch in config.R)
 if (only_emotion_emojis) {
   tag <- read.csv(emotag_file, encoding = "UTF-8", stringsAsFactors = FALSE)
