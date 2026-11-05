@@ -1,0 +1,8 @@
+Emoji tweets (N): 1908 
+Tweets with >=1 kept word AND >=1 kept emoji: 1725 
+Word nodes: 606  Emoji nodes: 108  Edges: 6755  Total weight: 9826 
+Bipartite density E/(|W||M|): 0.1032 
+Average degree - words: 11.15  emojis: 62.55 
+Average strength - words: 16.21  emojis: 90.98 
+Components: 1  Largest: 714 of 714 
+Spearman(degree, n_tweets) words: 0.87  emojis: 0.95 
