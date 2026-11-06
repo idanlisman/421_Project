@@ -18,7 +18,7 @@ posts <- do.call(rbind, lapply(files, read_one))
 stopifnot(all(c("ID", "Tweet", emotion_cols) %in% names(posts)))
 
 # Quick look at the data
-posts$has_emoji <- stri_detect_regex(posts$Tweet, "\\p{So}")
+posts$has_emoji <- lengths(extract_emojis(posts$Tweet)) > 0   # see R/emoji.R
 
 summary_lines <- c(
   "Posts per split:",

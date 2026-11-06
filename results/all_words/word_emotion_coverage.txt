@@ -1,0 +1,37 @@
+Words in NRC (8 emotions, at least one emotion): 4454
+Word nodes in our network: 1138
+  with at least one NRC emotion: 279
+  not in NRC (no emotion): 859
+Share of word links (strength) covered by NRC: 0.261
+
+Word nodes by number of emotions:
+
+  0   1   2   3   4   5   6   8 
+859 119  73  43  31   7   4   2 
+
+Word nodes by primary emotion (multiple = linked to 2 or more emotions):
+
+       anger anticipation      disgust         fear          joy     multiple      sadness     surprise        trust         <NA> 
+          14           14            5           17           21          160           19            6           23          859 
+
+Words linked to each emotion (a word with 2 emotions counts in both):
+       anger anticipation      disgust         fear          joy      sadness     surprise        trust 
+          89           70           54           94           80           89           45           72 
+
+Most-linked words NOT in NRC (no emotion):
+   name degree strength
+   just     36       86
+   like     31       56
+    get     29       56
+    can     26       43
+    day     25       41
+    now     24       39
+    one     23       38
+   make     21       33
+   know     20       32
+ always     19       24
+   much     19       28
+   life     17       27
+  night     17       22
+  think     17       28
+   even     16       25

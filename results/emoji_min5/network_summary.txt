@@ -1,0 +1,34 @@
+Word nodes: 276
+Emoji nodes: 63
+Edges: 957
+Bipartite density (edges / possible word-emoji pairs): 0.055
+Average degree of word nodes: 3.47
+Average degree of emoji nodes: 15.19
+Connected components: 1
+Size of the largest component: 339
+
+Top 10 words by degree:
+       name degree strength
+       good     22       34
+       love     20       39
+      happy     18       28
+       time     16       27
+      cheer     14       19
+      smile     14       20
+   terrible     13       14
+   tomorrow     12       17
+ depressing     11       12
+    shaking     11       12
+
+Top 10 emojis by degree:
+ name degree strength
+    😂    113      178
+    😭     51       70
+    😩     39       48
+    ❤     34       47
+    🙄     32       38
+    😊     28       39
+    😅     27       33
+    😍     25       29
+    🙃     25       28
+    🙈     23       33

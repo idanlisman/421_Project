@@ -1,10 +1,16 @@
 # Project settings. Change values here, not inside the other scripts.
 # Run all scripts from the project root folder (the folder that contains R/ and data/).
 
+# Which version of the analysis to run. run.R sets these for the main run and the robustness
+# runs; when you run a single script on its own, the defaults ("main" run) are used.
+run_name           <- Sys.getenv("RUN_NAME", "main")
+only_emotion_words <- as.logical(Sys.getenv("ONLY_EMOTION_WORDS", "TRUE"))  # TRUE = only NRC words
+min_emoji_posts    <- as.integer(Sys.getenv("MIN_EMOJI_POSTS", "3"))        # emoji must be in >= this many train posts
+
 raw_dir  <- file.path("data", "posts")
-proc_dir <- file.path("data", "processed")
-fig_dir  <- "figures"
-res_dir  <- "results"
+proc_dir <- file.path("data", "processed", run_name)   # every run writes to its own folders
+fig_dir  <- file.path("figures", run_name)
+res_dir  <- file.path("results", run_name)
 
 # The 11 emotion columns in the SemEval-2018 E-c files (1 = present, 0 = not present)
 emotion_cols <- c("anger", "anticipation", "disgust", "fear", "joy", "love",
@@ -13,7 +19,7 @@ emotion_cols <- c("anger", "anticipation", "disgust", "fear", "joy", "love",
 # Which words and emojis become nodes (counted on the TRAIN posts only)
 min_word_posts  <- 5   # keep a word only if it appears in at least this many train posts
 min_word_len    <- 3   # ignore words with fewer letters than this
-min_emoji_posts <- 1   # keep an emoji only if it appears in at least this many train posts
+# min_emoji_posts is set at the top of this file
 
 for (d in c(proc_dir, fig_dir, res_dir)) dir.create(d, showWarnings = FALSE, recursive = TRUE)
 
@@ -33,11 +39,11 @@ emotion_colors <- c(anger = "#D7191C", anticipation = "#F4A300", disgust = "#7B5
 no_emotion_color <- "grey75"
 multi_emotion_color <- "grey45"
 
-# Build the network only from words that have an NRC emotion (TRUE) or from all frequent words (FALSE)
-only_emotion_words  <- TRUE
+# only_emotion_words (NRC words only, or all frequent words) is set at the top of this file
 # Same idea for emojis, using EmoTag (FALSE = keep every frequent emoji)
 only_emotion_emojis <- FALSE
 source("R/nrc.R")
+source("R/emoji.R")
 
 # EmoTag: when does an emoji keep its SECOND emotion too?
 # The second emotion is kept only if its score is at least emotag_second_min AND at least
